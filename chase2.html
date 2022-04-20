@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="no-index,nofollow">
+    <link rel="icon" type="image/png" href="images/IMG_1577.PNG">
+    <title>このえはなあに~トラver.~</title>
+    <meta name="description" content="旅行,非日常,離島">
+
+    <!--  css
+---------------------------------->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> -->
+
+    <style>
+        body {
+            position: relative;
+        }
+
+        #konoe {
+            width: 50%;
+        }
+
+        #imageSize {
+            position: fixed;
+            z-index: 1;
+            left: 80px;
+            width: 40%;
+        }
+
+        #flexBox {
+            display: flex;
+        }
+
+        #flo {
+            left: 45rem;
+            bottom: 0px;
+            background-color: #ffffff;
+            /* border: solid 3px; */
+            width: 50%;
+            height: 100vh;
+            display: flex;
+            position: fixed;
+            z-index: 250;
+        }
+
+        .z-in {
+            /* z-index: 201; */
+            margin-top: 130px;
+            margin-left: 100px;
+            width: 200px;
+        }
+
+        .selimg {
+            margin: 50px;
+            width: 60%;
+        }
+
+        /* #konoe {
+            background: url(images/konoe2.png);
+        }*/
+
+        #MoL {
+            opacity: 1;
+            transition: opacity 2s ease-out;
+            /* position: absolute;
+            top: -500px;
+            left: -500px;
+            width: ' + diam + ';
+            height: ' + diam + ';
+            border: solid ' + brW + '' + color + ';
+            border-radius: 50%;
+            z-index: 200; */
+        }
+    </style>
+</head>
+
+<body id="insert">
+
+    <div id="flexBox">
+        <div id="konoe"><img src="images/konoe5.JPG" alt="neko" id="imageSize"></div>
+
+        <p style="position: fixed; top: 5rem; left: 56rem; z-index: 10000;">正しいと思う画像をクリックしてください。</p>
+        <div id="flo">
+            <div class="z-in">
+                <img src="images/konoe5.JPG" alt="" class="selimg">
+                <img src="images/konoe6.jpg" alt="" class="selimg">
+            </div>
+            <div class="z-in">
+                <img src="images/konoe7.jpg" alt="" class="selimg">
+                <img src="images/konoe8.jpg" alt="" class="selimg">
+            </div>
+        </div>
+    </div>
+    <!-- <div id="MoL">
+        <div></div>
+    </div> -->
+
+
+
+
+
+    <script type="text/javascript">
+
+        const color = "#000";
+        const dm = 100; //スポットライトの直径。単位px
+        const bW = 50; //スポットライトの円形枠線borderの太さ。直径を大きくして四方の角がハミ出る時は、この数値を大きくしてハミ出しを消す
+
+        const diam = dm + "px";
+        const brW = bW + "px";
+
+
+        /**
+         * カーソルをスポットライトの中央に固定するためのファンクション
+         * @param -- e
+         * @return -- なし
+        */
+        document.onmousemove = function (e) {
+            const mxy = dm / 2 + bW;
+            MoL.style.left = e.pageX - mxy + "px";
+            MoL.style.top = e.pageY - mxy + "px";
+        }
+
+        //     前のdivが黒丸の枠               下のdivが画面を黒くする(border範囲クソデカ)
+        document.getElementById('insert').insertAdjacentHTML('beforeend',
+            '<div id="MoL" style="position:absolute; top:-500px; left:-500px; width:' + diam + ';height:' + diam + ';border:solid ' + brW + ' ' + color + '; border-radius:50%; z-index:200;"><div id="wakuB" style="position:relative; top:0;left:0; width:' + diam + ';height:' + diam + '; outline:solid 2000px ' + color + '; z-index: 200;"></div></div>');
+
+
+        /**
+         * マウスストーカーと画面暗転の除去
+         * @param --  なし
+         * @return -- なし
+        */
+        function onoff() {
+            document.getElementById('MoL').style.opacity = 0;
+            document.onmousemove = null;
+        }
+
+        /**
+         * 正誤判定function 正しければ〇 誤っていれば×を表示
+         * @param --  index -- class配列の順番
+         * @return -- なし
+        */
+        function correct(index) {
+            if (index === 0) {
+                document.getElementById('konoe').insertAdjacentHTML('beforeend',
+                    `<img src="images/maru.png" alt="" style="width: 50%; position: fixed; z-index: 2;" id="nonimg">`);
+            } else {
+                document.getElementById('konoe').insertAdjacentHTML('beforeend',
+                    `<img src="images/batu.png" alt="" style="width: 50%; position: fixed; z-index: 2;" id="nonimg">`);
+            }
+
+            function nimg() {
+                document.getElementById('nonimg').style.opacity = 0;
+            }
+            setTimeout(nimg, 2000);
+        }
+
+
+        const selimg = document.querySelectorAll('.selimg');
+        selimg.forEach(function (item, index) {
+            item.onclick = function () {
+                onoff();
+                correct(index);
+            };
+        });
+
+
+        //insertAdjacentHTMLは</div>がないとき、作成しようとする。
+        // document.createElement('div')
+        // divTag.style = "position:absolute;top:-500px; left:-500px; width:' + diam + ';height:' + diam + ';border:solid ' + brW + ' ' + color + '; border-radius:50%; z-index:200;";
+        // document.write(
+        //     '<div id="MoL" style="position:absolute;top:-500px; left:-500px; width:' + diam + ';height:' + diam + ';border:solid ' + brW + ' ' + color + '; border-radius:50%; z-index:200;">');
+
+
+        // document.write(
+        //     '<div id="wakuB" style="position:absolute;top:0;left:0; width:' + diam + ';height:' + diam + '; outline:solid 2000px ' + color + ';"></div></div>');
+
+    </script>
+</body>
+
+</html>
