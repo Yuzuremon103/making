@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="icon" type="image/png" href="images/IMG_1577.PNG">
+    <title>アハ体験 パンダver.</title>
+    <meta name="description" content="これはJS課題作品です">
+
+    <!--  css
+---------------------------------->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        #backImg {
+            text-align: center;
+            background-image: url(images/panda.svg);
+            margin-left: 150px;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .po {
+            position: fixed;
+        }
+
+        #btn {
+            margin: 0;
+            position: fixed;
+            right: 5%;
+            top: 27%;
+            background-color: #d6ec86;
+            color: #444444;
+        }
+
+        #btn2 {
+            margin: 0;
+            position: fixed;
+            top: 55%;
+            right: 6.25%;
+            border: #272727 solid 2px;
+            border-radius: 10px;
+            background-color: #d6ec86;
+            color: #444;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 1px 3px;
+            font-family: 'Shipori Mincho', serif;
+        }
+
+        #fGa1,
+        #fGa2,
+        #fGa3,
+        #fGa4,
+        #fGa5,
+        #fGa6,
+        #fGa7,
+        #fGa8,
+        #fGa9,
+        #fGa10,
+        #fGa11,
+        #fGa12 {
+            opacity: 1;
+            transition: opacity 4s ease;
+        }
+
+        #fGa13,
+        #fGa14,
+        #fGa15 {
+            opacity: 1;
+            transition: opacity 4s ease;
+        }
+
+        #count {
+            position: fixed;
+            bottom: 10%;
+            right: 2.5%;
+            border: #272727 solid 2px;
+            background-color: #444;
+            width: 200px;
+            height: 100px;
+            font-size: 5rem;
+            text-align: center;
+            letter-spacing: 1rem;
+            line-height: 110px;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="width: 80%; height: 100vh; position: relative;">
+        <div id="backImg">
+            <img src="images/asika.png" id="fGa1" style="width: 45px; top: 20%; right: 40%; transform: rotate(210deg);"
+                alt="" class="po">
+            <img src="images/buta.png" id="fGa2" style="width: 35px; left: 19%; top: 40.5%;" alt="" class="po">
+            <img src="images/herazika.png" id="fGa3"
+                style="width: 140px; top: 42%; left: 27%; transform: rotate(240deg)" class="po" alt="">
+            <img src="images/hiyoko.png" id="fGa4" style="width: 15px; top: 42.9%; left: 27.75%;" class="po" alt="">
+            <img src="images/kirin.png" id="fGa5" style="width: 80px; bottom: 7%; left: 35.5%;" alt="" class="po">
+            <img src="images/kurione.png" id="fGa6"
+                style="width: 30px; top: 5.25%; left: 18.25%; transform: rotate(330deg)" alt="" class="po">
+            <img src="images/manmosu.png" id="fGa7" style="width: 200px; top: 8%; left: 20%; transform: rotate(345deg)"
+                alt="" class="po">
+            <img src="images/musasabi.png" alt="" id="fGa8" class="po"
+                style="width: 80px; top: 30%; left: 13.5%; transform: rotate(340deg);">
+            <img src="images/pengin.png" alt="" id="fGa9" class="po"
+                style="width: 100px; top: 33%; left: 31%; transform: rotate(320deg)">
+            <img src="images/sika.png" alt="" id="fGa10" class="po" style="width: 65px; bottom: 46%; right: 44%;">
+            <img src="images/tori1.png" alt="" id="fGa11" class="po"
+                style="width: 25px; bottom: 24%; left: 23.25%; transform: rotate(240deg)">
+            <img src="images/tori2.png" alt="" id="fGa12" class="po" style="width: 80px; top: 9%; left: 33.5%;">
+            <img src="images/tori3.png" alt="" id="fGa13" class="po"
+                style="width: 60px; top: 13%; right: 44.5%; opacity:0; transition: opacity 1s ease; overflow: hidden;">
+            <img src="images/usagi.png" alt="" id="fGa14" class="po" style="width: 70px; top: 34%; right: 37%;">
+            <img src="images/yamori.png" alt="" id="fGa15" class="po"
+                style="width: 60px; top: 21%; right: 45%; transform: rotate(220deg)">
+        </div>
+    </div>
+
+
+    <button id="btn">アハ体験を始める ! </button>
+    <button id="btn2">もう一度見る</button>
+    <div id="count">00</div>
+
+
+    <script>
+        'use strict';
+
+
+        const delay = 2000;
+        const waitT = 1000;
+
+        // id=""の画像を消すfunction
+        function NImg1() {
+            document.getElementById("fGa4").style.opacity = 0;
+        }
+
+        // id=""の画像を消すfunction
+        function NImg2() {
+            document.getElementById("fGa15").style.opacity = 0;
+        }
+
+        // id=""の画像を出すfunction
+        function addImg() {
+            document.getElementById("fGa13").style.opacity = 1;
+        }
+
+        // setTimeout(A, B)。B秒後にAを実行
+        function aha() {
+            setTimeout(NImg1, (6 * waitT));
+            setTimeout(NImg2, (7 * waitT));
+            setTimeout(addImg, (21 * waitT));
+        }
+
+        // カウントダウンタイマー。60秒経過で'fin'が出る
+        function count() {
+            let i = 30;
+            setInterval(function () {
+                document.getElementById('count').textContent = i;
+                i -= 1;
+                if (i <= -1) {
+                    document.getElementById('count').textContent = 'fin'
+                }
+            }, 1000);
+        }
+
+        // アハ体験を始めるボタンをクリックで実行
+        document.getElementById("btn").onclick = function () {
+            aha();
+            count();
+        };
+
+        // もう一度ボタンをクリックで実行
+        document.getElementById("btn2").onclick = function () {
+            location.reload();
+            aha();
+            count();
+        }
+
+    </script>
+</body>
+
+</html>

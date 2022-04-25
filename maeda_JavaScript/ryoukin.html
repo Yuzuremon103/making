@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="icon" type="image/png" href="images/IMG_1577.PNG">
+    <title>ロミオとジュリエッ島 宿泊プラン</title>
+    <meta name="description" content="これはJS課題作品です">
+
+    <!--  css
+---------------------------------->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="images/image1280.png" alt="ロゴ" id="logo">
+        </a>
+    </header>
+    <label for="openclose">
+        <nav id="relative">
+            <input type="checkbox" id="openclose">
+            <span></span>
+            <ul id="main-nav" class="position">
+                <li><a href="kannai.html">館内紹介</a></li>
+                <li><a href="keikan.html">島の景観</a></li>
+                <li><a href="ryoukin.html">宿泊プラン</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </label>
+    <main>
+        <h2 class="pl">宿泊プラン</h2>
+        <section class="wrapper">
+            <article id="flex">
+                <p class="ribbon1">➊プラン選択</p>
+                <p class="ribbon2">➋予約内容入力</p>
+                <p class="ribbon3">➌個人情報入力</p>
+                <p class="ribbon4">➍予約完了</p>
+            </article>
+            <article>
+                <h3 class="t-under t-color">新型コロナウィルス感染予防対策とご協力へのお願い</h3>
+                <br>
+                <p>ロミオとジュリエッ島では、3密を回避し、
+                    お客様および従業員の健康と安全を考慮した新型コロナウィルス感染防止策と、
+                    「新しい旅館様式」として様々な取り組みを実施いたしております。
+                </p>
+                <br>
+                <p>①チェックイン時の検温実施</p>
+                <p>②客室清掃時に、通常の清掃に加えて、拭き上げ除菌とUV除菌機を使用し除菌を強化</p>
+                <p>③全客室に除菌用の強酸性電解水スプレーを設置</p>
+                <p>④一定時間ごとに、館内の定期クリーンネスを実施</p>
+                <p>⑤館内各所で次亜塩素酸ナトリウム消毒液とアルコール消毒液を設置</p>
+                <p>⑥お食事の際は、仕切りのある宴処でご案内</p>
+                <p>⑦大浴場での密を避けるため脱衣籠の数を半分以下に減少</p>
+                <p>⑧スタッフのマスクの着用を徹底</p>
+                <p>⑨フロントカウンターに飛沫感染防止用アクリルパネルを導入</p>
+                <p>⑩スタッフの健康と衛生面の管理徹底</p>
+                <p>⑪館内の情報をご自身のスマートフォンから安心して確認</p>
+            </article>
+        </section>
+
+        <section class="wrapper disf">
+            <div class="form">空室検索</div>
+            <form method="" action="">
+                <table id="table">
+                    <tr>
+                        <th class="th">宿泊日</th>
+                        <td class="td">
+                            <input type="date" name="calendar">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="th">宿泊数</th>
+                        <td class="td">
+                            <select name="hiniti">
+                                <option value="one" selected>1</option>
+                                <option value="two">2</option>
+                                <option value="three">3</option>
+                                <option value="four">4</option>
+                            </select>
+                            <span>日</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="th">人数</th>
+                        <td class="td">
+                            <select name="ninzuu">
+                                <option value="one" selected>1</option>
+                                <option value="two">2</option>
+                                <option value="three">3</option>
+                                <option value="four">4</option>
+                            </select>
+                            <span>人</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="th">プラン名</th>
+                        <td class="td">
+                            <select name="plan">
+                                <option value="mitei" selected>未定</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="th">部屋タイプ</th>
+                        <td class="td">
+                            <select name="heya">
+                                <option value="mitei" selected>未定</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="th">一人当たりの宿泊料金</th>
+                        <td class="td">
+                            <select name="ryoukin">
+                                <option value="sita">▼下限なし</option>
+                            </select>
+                            <span> ～ </span>
+                            <select name="ryoukin">
+                                <option value="ue">▲上限なし</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="td">
+                            <input type="submit" value="この条件で空室を検索" class="subpd">
+                            <input type="reset" value="取消" class="subpd">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </main>
+
+
+    <footer>
+        <small>&copy;ロミオとジュリエッ島政策委員会</small>
+    </footer>
+
+    <div id="gotop">
+        <a href="#"><span>≫</span></a>
+    </div>
+
+</body>
+
+</html>

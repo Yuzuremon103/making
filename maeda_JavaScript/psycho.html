@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="icon" type="image/png" href="images/IMG_1577.PNG">
+    <title>交流イベント</title>
+    <meta name="description" content="これはJS課題作品です">
+
+    <!--  css
+---------------------------------->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="images/image1280.png" alt="ロゴ" id="logo">
+        </a>
+        <label for="openclose">
+            <nav id="relative">
+                <input type="checkbox" id="openclose">
+                <span></span>
+                <ul id="main-nav" class="position">
+                    <li><a href="kannai.html">館内紹介</a></li>
+                    <li><a href="keikan.html">島の景観</a></li>
+                    <li><a href="ryoukin.html">宿泊プラン</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </label>
+    </header>
+
+    <main>
+        <h2 class="pl">畜生心理テスト</h2>
+
+        <section class="wrapper">
+            <article>
+                <div class="oto" id="del">下記から、あてはまるものをお選びください。
+                </div>
+            </article>
+
+            <article>
+                <div class="choose_box">
+                    <div id="q_01" class="fit">
+                        <p class="question">Q1. 初対面の人に会うのが好きで、初対面でも相手との会話を楽しむことができる</p>
+                        <div class="flexB">
+                            <form action="" id="syo">
+                                <input type="radio" name="num1" value="5" class="size1">
+                                <input type="radio" name="num1" value="4" class="size2">
+                                <input type="radio" name="num1" value="3" class="size3">
+                                <input type="radio" name="num1" value="2" class="size4">
+                                <input type="radio" name="num1" value="1" class="size5">
+                            </form>
+                        </div>
+                        <div class="flexA">
+                            <p class="pSize">同意</p>
+                            <p class="pSize">やや同意</p>
+                            <p class="pSize">微妙</p>
+                            <p class="pSize">やや否定</p>
+                            <p class="pSize">否定</p>
+                        </div>
+                        <div class="btnSize">
+                            <button href="#q_02" class="btn1 button">次の質問へ</button>
+                        </div>
+                    </div>
+                    <!-- 質問 1 終わり -->
+
+                    <div id="q_02" class="add fit">
+                        <p class="question">Q2.他人に思いやりがあり、それを行動に移していて<br>みんなに差別なく親切にできている</p>
+                        <div class="flexB">
+                            <form action="" id="tani">
+                                <input type="radio" name="num2" value="5" class="size1">
+                                <input type="radio" name="num2" value="4" class="size2">
+                                <input type="radio" name="num2" value="3" class="size3">
+                                <input type="radio" name="num2" value="2" class="size4">
+                                <input type="radio" name="num2" value="1" class="size5">
+                            </form>
+                        </div>
+                        <div class="flexA">
+                            <p class="pSize">同意</p>
+                            <p class="pSize">やや同意</p>
+                            <p class="pSize">微妙</p>
+                            <p class="pSize">やや否定</p>
+                            <p class="pSize">否定</p>
+                        </div>
+                        <div class="btnSize">
+                            <button href="#q_03" class="btn2 button">次の質問へ</button>
+                        </div>
+                    </div>
+                    <!-- 質問 2 終わり -->
+
+                    <div id="q_03" class="add fit">
+                        <p class="question">Q3.物事をきっちりこなし、手際よく効率よく行なっている</p>
+                        <div class="flexB">
+                            <form action="" id="mono">
+                                <input type="radio" name="num3" value="5" class="size1">
+                                <input type="radio" name="num3" value="4" class="size2">
+                                <input type="radio" name="num3" value="3" class="size3">
+                                <input type="radio" name="num3" value="2" class="size4">
+                                <input type="radio" name="num3" value="1" class="size5">
+                            </form>
+                        </div>
+                        <div class="flexA">
+                            <p class="pSize">同意</p>
+                            <p class="pSize">やや同意</p>
+                            <p class="pSize">微妙</p>
+                            <p class="pSize">やや否定</p>
+                            <p class="pSize">否定</p>
+                        </div>
+                        <div class="btnSize">
+                            <button href="#q_04" class="btn3 button">次の質問へ</button>
+                        </div>
+                    </div>
+                    <!-- 質問 3 終わり -->
+
+                    <div id="q_04" class="add fit">
+                        <p class="question">Q4.いつも心配事が多く、不安になりやすい</p>
+                        <div class="flexB">
+                            <form action="" id="itu">
+                                <input type="radio" name="num4" value="5" class="size1">
+                                <input type="radio" name="num4" value="4" class="size2">
+                                <input type="radio" name="num4" value="3" class="size3">
+                                <input type="radio" name="num4" value="2" class="size4">
+                                <input type="radio" name="num4" value="1" class="size5">
+                            </form>
+                        </div>
+                        <div class="flexA">
+                            <p class="pSize">同意</p>
+                            <p class="pSize">やや同意</p>
+                            <p class="pSize">微妙</p>
+                            <p class="pSize">やや否定</p>
+                            <p class="pSize">否定</p>
+                        </div>
+                        <div class="btnSize">
+                            <button href="#q_05" class="btn4 button">次の質問へ</button>
+                        </div>
+                    </div>
+                    <!-- 質問 4 終わり -->
+
+                    <div id="q_05" class="add fit">
+                        <p class="question">Q5.新しいことを知ることが好きで、クリエイティビティが高く<br>好奇心や探究心が強い</p>
+                        <div class="flexB">
+                            <form action="" id="ata">
+                                <input type="radio" name="num5" value="5" class="size1">
+                                <input type="radio" name="num5" value="4" class="size2">
+                                <input type="radio" name="num5" value="3" class="size3">
+                                <input type="radio" name="num5" value="2" class="size4">
+                                <input type="radio" name="num5" value="1" class="size5">
+                            </form>
+                        </div>
+                        <div class="flexA">
+                            <p class="pSize">同意</p>
+                            <p class="pSize">やや同意</p>
+                            <p class="pSize">微妙</p>
+                            <p class="pSize">やや否定</p>
+                            <p class="pSize">否定</p>
+                        </div>
+                        <div class="btnSize">
+                            <button href="#q_06" class="btn5 button">次の質問へ</button>
+                        </div>
+                    </div>
+                    <!-- 質問 5 終わり -->
+
+                    <div id="q_06" class="add fit">
+                        <p class="question">Q6.恥ずかしがり屋で物静かなタイプ</p>
+                        <div class="flexB">
+                            <form action="" id="hazu">
+                                <input type="radio" name="num6" value="1" class="size1">
+                                <input type="radio" name="num6" value="2" class="size2">
+                                <input type="radio" name="num6" value="3" class="size3">
+                                <input type="radio" name="num6" value="4" class="size4">
+                                <input type="radio" name="num6" value="5" class="size5">
+                            </form>
+                        </div>
+                        <div class="flexA">
+                            <p class="pSize">同意</p>
+                            <p class="pSize">やや同意</p>
+                            <p class="pSize">微妙</p>
+                            <p class="pSize">やや否定</p>
+                            <p class="pSize">否定</p>
+                        </div>
+                        <div class="btnSize">
+                            <button href="#q_07" class="btn6 button">次の質問へ</button>
+                        </div>
+                    </div>
+                    <!-- 質問 6 終わり -->
+
+                    <div id="q_07" class="add fit">
+                        <p class="question">Q7.思ったことをすぐに口に出し、<br>他人の感情に流されず冷静な判断をする</p>
+                        <div class="flexB">
+                            <form action="" id="omo">
+                                <input type="radio" name="num7" value="1" class="size1">
+                                <input type="radio" name="num7" value="2" class="size2">
+                                <input type="radio" name="num7" value="3" class="size3">
+                                <input type="radio" name="num7" value="4" class="size4">
+                                <input type="radio" name="num7" value="5" class="size5">
+                            </form>
+                        </div>
+                        <div class="flexA">
+                            <p class="pSize">同意</p>
+                            <p class="pSize">やや同意</p>
+                            <p class="pSize">微妙</p>
+                            <p class="pSize">やや否定</p>
+                            <p class="pSize">否定</p>
+                        </div>
+                        <div class="btnSize">
+                            <button href="#q_08" class="btn7 button">次の質問へ</button>
+                        </div>
+                    </div>
+                    <!-- 質問 7 終わり -->
+
+                    <div id="q_08" class="add fit">
+                        <p class="question">Q8.後先考えずに行動して、<br>ぎりぎりまで物事に手をつけない衝動的な部分がある</p>
+                        <div class="flexB">
+                            <form action="" id="ato">
+                                <input type="radio" name="num8" value="1" class="size1">
+                                <input type="radio" name="num8" value="2" class="size2">
+                                <input type="radio" name="num8" value="3" class="size3">
+                                <input type="radio" name="num8" value="4" class="size4">
+                                <input type="radio" name="num8" value="5" class="size5">
+                            </form>
+                        </div>
+                        <div class="flexA">
+                            <p class="pSize">同意</p>
+                            <p class="pSize">やや同意</p>
+                            <p class="pSize">微妙</p>
+                            <p class="pSize">やや否定</p>
+                            <p class="pSize">否定</p>
+                        </div>
+                        <div class="btnSize">
+                            <button href="#q_09" class="btn8 button">次の質問へ</button>
+                        </div>
+                    </div>
+                    <!-- 質問 8 終わり -->
+
+                    <div id="q_09" class="add fit">
+                        <p class="question">Q9.大抵リラックスして落ち着いている</p>
+                        <div class="flexB">
+                            <form action="" id="tai">
+                                <input type="radio" name="num9" value="1" class="size1">
+                                <input type="radio" name="num9" value="2" class="size2">
+                                <input type="radio" name="num9" value="3" class="size3">
+                                <input type="radio" name="num9" value="4" class="size4">
+                                <input type="radio" name="num9" value="5" class="size5">
+                            </form>
+                        </div>
+                        <div class="flexA">
+                            <p class="pSize">同意</p>
+                            <p class="pSize">やや同意</p>
+                            <p class="pSize">微妙</p>
+                            <p class="pSize">やや否定</p>
+                            <p class="pSize">否定</p>
+                        </div>
+                        <div class="btnSize">
+                            <button href="#q_010" class="btn9 button">次の質問へ</button>
+                        </div>
+                    </div>
+                    <!-- 質問 9 終わり -->
+
+                    <div id="q_010" class="add fit">
+                        <p class="question">Q10.物事を現実的に考え、常識破りなことはしない、<br>わりと保守的な考え方である</p>
+                        <div class="flexB">
+                            <form action="" id="monoG">
+                                <input type="radio" name="num10" value="1" class="size1">
+                                <input type="radio" name="num10" value="2" class="size2">
+                                <input type="radio" name="num10" value="3" class="size3">
+                                <input type="radio" name="num10" value="4" class="size4">
+                                <input type="radio" name="num10" value="5" class="size5">
+                            </form>
+                        </div>
+                        <div class="flexA">
+                            <p class="pSize">同意</p>
+                            <p class="pSize">やや同意</p>
+                            <p class="pSize">微妙</p>
+                            <p class="pSize">やや否定</p>
+                            <p class="pSize">否定</p>
+                        </div>
+                        <div class="btnSize">
+                            <button href="#q_011" class="btn010 button">次の質問へ</button>
+                        </div>
+                    </div>
+                    <!-- 質問 10 終わり -->
+
+
+                    <div id="q_011" class="q_011 add">
+                        <p class="bun">あなたは…</p>
+                        <h4 class="type">外向的齧歯うさぎタイプ</h4>
+                        <img src="images/gaikou.png" alt=""
+                            style="width: 30%; height: 30%; position: relative; top: 30%; left: 35%;">
+                        <p class="dis">あなたは喋るのが好きな、陽気タイプ。<br>物事に対し積極的で、社交性があり明るい性格の持ち主です。</p>
+                    </div>
+
+                    <!-- 選択肢の答え① -->
+
+                    <div id="q_012" class="q_011 add">
+                        <p class="bun">あなたは…</p>
+                        <h4 class="type">協調性半目ネズミタイプ</h4>
+                        <img src="images/kyotyo.png" alt=""
+                            style="width: 50%; height: 50%; position: relative; top: 30%; left: 27%;">
+                        <p class="dis">あなたは他人に対し心が広く、思いやりのあるタイプ。<br>協力的で素直な人が多く、献身的になりすぎて無理がたたることも。</p>
+                    </div>
+
+                    <!-- 選択肢の答え② -->
+
+                    <div id="q_013" class="q_011 add">
+                        <p class="bun">あなたは…</p>
+                        <h4 class="type">誠実性犬畜生タイプ</h4>
+                        <img src="images/seizitu.jpg" alt=""
+                            style="width: 60%; height: 50%; position: relative; top: 30%; left: 21%; margin-top: 30px;">
+                        <p class="dis">あなたは責任感が人一倍あり、勤勉で真面目な傾向にあります。<br>コツコツと物事を計画的にこなす、慎重な人が多いです。</p>
+                    </div>
+
+                    <!-- 選択肢の答え③ -->
+
+                    <div id="q_014" class="q_011 add">
+                        <p class="bun">あなたは…</p>
+                        <h4 class="type">感情・涙ブルブルパンダタイプ</h4>
+                        <img src="images/sinkei.png" alt=""
+                            style="width: 40%; height: 40%; position: relative; top: 30%; left: 30%; margin-top: 30px;">
+                        <p class="dis">あなたは感情の機微に敏感で、プレッシャーに弱い傾向があります。<br>心配性で、未来に対し不安を抱きやすいです。</p>
+                    </div>
+
+                    <!-- 選択肢の答え③ -->
+
+                    <div id="q_015" class="q_011 add">
+                        <p class="bun">あなたは…</p>
+                        <h4 class="type">新しいもの好きニヤニヤギタイプ</h4>
+                        <img src="images/kaihou.png" alt=""
+                            style="width: 50%; height: 50%; position: relative; top: 30%; left: 22%; margin-top: 40px;">
+                        <p class="dis">あなたは全面的に好奇心が強く、頭も回転の早い方。<br>審美眼やオリジナリティも兼ね備えますが、非現実的になりやすいです。</p>
+                    </div>
+
+                    <!-- 選択肢の答え③ -->
+
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer style="position: fixed; bottom: 0; width: 100%; background-color: #b6a9ff;">
+        <small style="color: #424242;">&copy;ロミオとジュリエッ島政策委員会</small>
+    </footer>
+
+    <script>
+        'use strict';
+
+
+        let num1Radio = document.getElementsByName('num1');
+        let num2Radio = document.getElementsByName('num2');
+        let num3Radio = document.getElementsByName('num3');
+        let num4Radio = document.getElementsByName('num4');
+        let num5Radio = document.getElementsByName('num5');
+        let num6Radio = document.getElementsByName('num6');
+        let num7Radio = document.getElementsByName('num7');
+        let num8Radio = document.getElementsByName('num8');
+        let num9Radio = document.getElementsByName('num9');
+        let num10Radio = document.getElementsByName('num10');
+
+        let val1;
+        let val2;
+        let val3;
+        let val4;
+        let val5;
+        let val6;
+        let val7;
+        let val8;
+        let val9;
+        let val10;
+
+        let len1 = num1Radio.length;
+
+        function sum(once, second) {
+            return once + second;
+        }
+
+
+
+        /**
+         * sum()を実行し、一番大きいのもを表示するfunction
+         * @param --  なし
+         * @return -- なし
+        */
+        function biggest() {
+            //num1のvalue取得 -- val1
+            for (let i = 0; i < len1; i++) {
+                if (num1Radio[i].checked) {
+                    val1 = parseInt(num1Radio[i].value);
+                }
+            }
+
+
+            //num2のvalue取得 -- val2
+            for (let i = 0; i < len1; i++) {
+                if (num2Radio[i].checked) {
+                    val2 = parseInt(num2Radio[i].value);
+                }
+            }
+
+            //num3のvalue取得 -- val3
+            for (let i = 0; i < len1; i++) {
+                if (num3Radio[i].checked) {
+                    val3 = parseInt(num3Radio[i].value);
+                }
+            }
+
+            //num4のvalue取得 -- val4
+            for (let i = 0; i < len1; i++) {
+                if (num4Radio[i].checked) {
+                    val4 = parseInt(num4Radio[i].value);
+                }
+            }
+
+            //num5のvalue取得 -- val5
+            for (let i = 0; i < len1; i++) {
+                if (num5Radio[i].checked) {
+                    val5 = parseInt(num5Radio[i].value);
+                }
+            }
+
+            //num6のvalue取得 -- val6
+            for (let i = 0; i < len1; i++) {
+                if (num6Radio[i].checked) {
+                    val6 = parseInt(num6Radio[i].value);
+                }
+            }
+
+            //num7のvalue取得 -- val7
+            for (let i = 0; i < len1; i++) {
+                if (num7Radio[i].checked) {
+                    val7 = parseInt(num7Radio[i].value);
+                }
+            }
+
+            //num8のvalue取得 -- val8
+            for (let i = 0; i < len1; i++) {
+                if (num8Radio[i].checked) {
+                    val8 = parseInt(num8Radio[i].value);
+                }
+            }
+
+            //num9のvalue取得 -- val9
+            for (let i = 0; i < len1; i++) {
+                if (num9Radio[i].checked) {
+                    val9 = parseInt(num9Radio[i].value);
+                }
+            }
+
+            //num10のvalue取得 -- val10
+            for (let i = 0; i < len1; i++) {
+                if (num10Radio[i].checked) {
+                    val10 = parseInt(num10Radio[i].value);
+                }
+            }
+
+            const gaikou1 = sum(val1, val6);
+            const kyotyo2 = sum(val2, val7);
+            const seizitu3 = sum(val3, val8);
+            const sinkei4 = sum(val4, val9);
+            const kaihou5 = sum(val5, val10);
+
+            if (gaikou1 >= kyotyo2 && gaikou1 >= seizitu3 && gaikou1 >= sinkei4 && gaikou1 >= kaihou5) {
+                document.getElementById('q_011').style.display = 'block';
+            } else if (kyotyo2 >= gaikou1 && kyotyo2 >= seizitu3 && kyotyo2 >= sinkei4 && kyotyo2 >= kaihou5) {
+                document.getElementById('q_012').style.display = 'block';
+            } else if (seizitu3 >= gaikou1 && seizitu3 >= kyotyo2 && seizitu3 >= sinkei4 && seizitu3 >= kaihou5) {
+                document.getElementById('q_013').style.display = 'block';
+            } else if (sinkei4 >= gaikou1 && sinkei4 >= kyotyo2 && sinkei4 >= seizitu3 && sinkei4 >= kaihou5) {
+                document.getElementById('q_014').style.display = 'block';
+            } else if (kaihou5 >= gaikou1 && kaihou5 >= kyotyo2 && kaihou5 >= seizitu3 && kaihou5 >= sinkei4) {
+                document.getElementById('q_015').style.display = 'block';
+            }
+        }
+
+
+        /**
+         * 現在表示されている問題を消し、次の問題(結果)を表示するfunction
+         * @param  --  num(数字)
+         * @return --  なし
+        */
+        function next(num) {
+            if (num <= 9 || num >= 11) {
+                document.getElementById('q_0' + num).style.display = 'none';
+                document.getElementById('q_0' + (num + 1)).style.display = 'block';
+            } else if (num === 10) {
+                document.getElementById('del').style.display = 'none';
+                document.getElementById('q_0' + num).style.display = 'none';
+                biggest();
+            }
+        }
+
+        /**
+         * 選択肢をクリックするとnext()を読むイベントfunction
+        */
+        document.querySelector('.btn1').onclick = function () {
+            const num = 1
+            next(num);
+        }
+
+        document.querySelector('.btn2').onclick = function () {
+            const num = 2
+            next(num);
+        }
+
+        document.querySelector('.btn3').onclick = function () {
+            const num = 3
+            next(num);
+        }
+
+        document.querySelector('.btn4').onclick = function () {
+            const num = 4
+            next(num);
+        }
+
+        document.querySelector('.btn5').onclick = function () {
+            const num = 5
+            next(num);
+        }
+
+        document.querySelector('.btn6').onclick = function () {
+            const num = 6
+            next(num);
+        }
+
+        document.querySelector('.btn7').onclick = function () {
+            const num = 7
+            next(num);
+        }
+
+        document.querySelector('.btn8').onclick = function () {
+            const num = 8
+            next(num);
+        }
+
+        document.querySelector('.btn9').onclick = function () {
+            const num = 9
+            next(num);
+        }
+
+        document.querySelector('.btn010').onclick = function () {
+            const num = 10
+            next(num);
+        }
+
+    </script>
+</body>
+
+</html>

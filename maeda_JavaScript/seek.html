@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="icon" type="image/png" href="images/IMG_1577.PNG">
+    <title>アハ体験</title>
+    <meta name="description" content="これはJS課題作品です">
+
+    <!--  css
+---------------------------------->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        #backImg {
+            text-align: center;
+            background-image: url(images/haikei.jpg);
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .po {
+            position: fixed;
+        }
+
+        #btn {
+            margin: 0;
+            position: fixed;
+            right: 5%;
+            top: 27%;
+            background-color: #d6ec86;
+            color: #444444;
+        }
+
+        #btn2 {
+            margin: 0;
+            position: fixed;
+            top: 55%;
+            right: 6.25%;
+            border: #272727 solid 2px;
+            border-radius: 10px;
+            background-color: #d6ec86;
+            color: #444;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 1px 3px;
+            font-family: 'Shipori Mincho', serif;
+        }
+
+        #fGa1,
+        #fGa2,
+        #fGa3,
+        #fGa4,
+        #fGa5,
+        #fGa6,
+        #fGa7,
+        #fGa8,
+        #fGa9,
+        #fGa10,
+        #fGa11,
+        #fGa12 {
+            opacity: 1;
+            transition: opacity 50s ease;
+        }
+
+        #count {
+            position: fixed;
+            bottom: 10%;
+            right: 2.5%;
+            border: #272727 solid 2px;
+            background-color: #444;
+            width: 200px;
+            height: 100px;
+            font-size: 5rem;
+            text-align: center;
+            letter-spacing: 1rem;
+            line-height: 110px;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="width: 80%; height: 100vh; position: relative;">
+        <div id="backImg">
+            <img src="images/kumapic.png" id="fGa1" style="width: 150px; top: 65%; left: 60%;" alt="" class="po">
+            <img src="images/asikapic.png" id="fGa2" style="width: 350px; left: -2%; top: -5%;" alt="" class="po">
+            <img src="images/sakanapic.png" id="fGa3" style="width: 70px; top: 45%; left: 24.5%;" class="po" alt="">
+            <img src="images/perikanpic.png" id="fGa4" style="width: 30px; top: 24%; left: 38%;" class="po" alt="">
+            <img src="images/rakidapic.png" id="fGa5" style="width: 20px; top: 56.75%; left: 46%; opacity: 0.4;" alt=""
+                class="po">
+            <img src="images/saipic.png" id="fGa6" style="width: 147px; bottom: 19.75%; left: 9%; opacity: 0.8;" alt=""
+                class="po">
+            <img src="images/saipic2.png" id="fGa7"
+                style="width: 30px; top: 19.5%; right: 27%; transform: rotate(345deg)" alt="" class="po">
+            <img src="images/toripic.png" alt="" id="fGa8" class="po"
+                style="width: 280px; top: 5%; left: 29%; transform: rotate(340deg);">
+            <img src="images/tyopic.png" alt="" id="fGa9" class="po"
+                style="width: 50px; top: 41%; left: 14.5%; transform: rotate(340deg)">
+            <img src="images/umapic.png" alt="" id="fGa10" class="po" style="width: 250px; bottom: 5%; left: 15%;">
+            <img src="images/yamoripic.png" alt="" id="fGa11" class="po"
+                style="width: 80px; bottom: 5%; left: 3%; transform: rotate(260deg)">
+            <img src="images/karasupic.png" alt="" id="fGa12" class="po" style="width: 100px; bottom: 16%; right: 22%;">
+            <img src="images/pengin.png" alt="" id="fGa13" class="po"
+                style="width: 10px; top: 27%; right: 26.5%; opacity: 0; transition: opacity 50s ease; overflow: hidden;">
+        </div>
+    </div>
+
+
+    <button id="btn">アハ体験を始める ! </button>
+    <button id="btn2">もう一度見る</button>
+    <div id="count">00</div>
+
+
+    <script>
+        'use strict';
+
+
+        const delay = 2000;
+        const waitT = 1000;
+
+        // id=""の画像を消すfunction
+        function NImg1() {
+            document.getElementById("fGa1").style.opacity = 0;
+        }
+
+        // id=""の画像を消すfunction
+        function NImg2() {
+            document.getElementById("fGa5").style.opacity = 0;
+        }
+
+        // id=""の画像を出すfunction
+        function addImg() {
+            document.getElementById("fGa13").style.opacity = 1;
+        }
+
+        // setTimeout(A, B)。B秒後にAを実行
+        function aha() {
+            setTimeout(NImg1, (2 * waitT));
+            setTimeout(NImg2, (7 * waitT));
+            setTimeout(addImg, (1 * waitT));
+        }
+
+
+        // カウントダウンタイマー。60秒経過で'fin'が出る
+        function count() {
+            let i = 50;
+            setInterval(function () {
+                document.getElementById('count').textContent = i;
+                i -= 1;
+                if (i <= -1) {
+                    document.getElementById('count').textContent = 'fin'
+                }
+            }, 1000);
+        }
+
+        // アハ体験を始めるボタンをクリックで実行
+        document.getElementById("btn").onclick = function () {
+            aha();
+            count();
+        };
+
+        // もう一度ボタンをクリックで実行
+        document.getElementById("btn2").onclick = function () {
+            location.reload();
+            aha();
+            count();
+        }
+
+    </script>
+</body>
+
+</html>
